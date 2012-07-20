@@ -1,7 +1,5 @@
 node basenode {
 
-  include sudo
-
   package {'tzdata':
     ensure => installed
   }
