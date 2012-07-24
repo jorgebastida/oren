@@ -17,4 +17,11 @@ class samba {
     notify  => Service['samba']
   }
 
+  service { 'samba':
+    ensure      => running,
+    enable      => true,
+    hasrestart  => true,
+    require     => Package['samba']
+  }
+
 }
