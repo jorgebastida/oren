@@ -8,6 +8,10 @@ node basenode {
     ensure => installed
   }
 
+  package { 'curl':
+    ensure => installed
+  }
+
   package { 'vim':
     ensure => installed
   }
