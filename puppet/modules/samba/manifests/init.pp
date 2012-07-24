@@ -14,10 +14,10 @@ class samba {
     mode    => 644,
     source  => 'puppet:///modules/samba/smb.conf',
     require => Package['samba'],
-    notify  => Service['samba']
+    notify  => Service['smbd']
   }
 
-  service { 'samba':
+  service { 'smbd':
     ensure      => running,
     enable      => true,
     hasrestart  => true,
